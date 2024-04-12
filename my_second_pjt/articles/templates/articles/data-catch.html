@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Data Catch</h2>
+<p>메세지 : {{ message }}</p>
+<button type="submit"><a href="{% url 'articles:data-throw' %}"> 다시 던지러 가기</a></button>
+{% endblock content %}

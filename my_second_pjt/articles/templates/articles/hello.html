@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello, {{ name }}!</h1>
+<li>{{ tags|join:", " }}</li>
+<li>기분 : {{ conditions.today }}</li>
+<ul>
+	{% for condition in conditions.items %}
+	<li>{{ condition.0}} - {{ condition.1 }}</li>
+	{% endfor %}
+</ul>
+
+{% endblock content%}
