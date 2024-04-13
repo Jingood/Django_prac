@@ -3,6 +3,9 @@
 {% block content %}
 <h2>Article Detail Page</h2>
 <p>제목: {{ article.title }}</p>
+{% if article.image %}
+<img src="{{ article.image.url }}">
+{% endif %}
 <p>내용: {{ article.content }}</p>
 <p>생성일시: {{ article.created_at }}</p>
 <p>수정일시: {{ article.updated_at }}</p>

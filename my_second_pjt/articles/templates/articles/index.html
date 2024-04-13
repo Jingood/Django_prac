@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <h1> INDEX </h1>
-<a href="{% url 'users:users'%}">User</a>
-<a href="{% url 'articles:articles' %}">Articles</a>
+<img src="{% static  "articles/sunset.jpg" %}">
+<ul>
+	<li><a href="{% url 'users:users'%}">User</a></li>
+	<li><a href="{% url 'articles:articles' %}">Articles</a></li>
+</ul>
 {% endblock content%}
